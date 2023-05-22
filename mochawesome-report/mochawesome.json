@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-05-11T11:19:00.905Z",
+    "end": "2023-05-11T11:24:44.728Z",
+    "duration": 343823,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "96f7e2cc-15d1-4be6-ad8f-59631cd61ca3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Venaqi\\UAT.cy.js",
+      "file": "cypress\\e2e\\Venaqi\\UAT.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "06834793-5df2-49ce-bf76-1a152048f07c",
+          "title": "SA",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "SA:login, changeplan, sidebar, org CURD, user CURD, filterbyrole",
+              "fullTitle": "SA SA:login, changeplan, sidebar, org CURD, user CURD, filterbyrole",
+              "timedOut": null,
+              "duration": 337648,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos\",\n  \"value\": \"cypress\\\\e2e\\\\Venaqi\\\\UAT.cy.js\"\n}",
+              "code": "(0, _SAutilityfun.SALogin)();\n(0, _SAutilityfun.changelan)();\n(0, _SAutilityfun.checksidebar)();\n/*****************SA CURD*************/\n(0, _SAAddorg.addorg)();\n(0, _SAAddorg.editorg)();\ncy.wait(2000);\n(0, _SAAddUser.usernavigate)();\nlet AcEmail = (0, _SAAddUser.addAC)();\nlet CaEmail = (0, _SAAddUser.addCA)();\ncy.wait(4000);\nlet clientEmail = (0, _SAAddUser.addclient)();\n(0, _SAEditUsers.editAC)(AcEmail);\n(0, _SAEditUsers.editCA)(CaEmail);\ncy.wait(3000);\n(0, _SAEditUsers.editClient)(clientEmail);\n(0, _SAFilterByrole.rolefilter)();\n(0, _SADeleteUser.delAC)(AcEmail);\ncy.wait(2000);\n(0, _SADeleteUser.delCA)(CaEmail);\n(0, _SADeleteUser.delclient)(clientEmail);\n(0, _SAAddorg.deleteorg)();\n(0, _SAFilterByrole.SAsignout)();\n/************CA CURD & create a slot*********/\n(0, _CAAdduser.CALogin)();\nlet response = (0, _CAAdduser.CAadduser)();\n// CAedituser(response);\n// CAdeluser(response);\nlet currentTime = (0, _CACalendar.createslot)();\ncy.wait(2000);\n(0, _CAExport.CAsignout)();\ncy.reload();\n/**********Make single form & Rate************/\n(0, _CAAdduser.CALogin)();\n(0, _CACustomerReturns.makeSingleForm)();\n(0, _CAExport.CAsignout)();\ncy.reload();\n/*******Client feebback for singleform*******/\n(0, _clientApponitment.clientLogin)();\n(0, _ClientFeedback.clientrating)();\n(0, _ClientFeedback.clientsignout)();\ncy.reload();\n/*********CA sector form*******/\n(0, _CAAdduser.CALogin)();\n(0, _CAactivitysectorform.FormActivitysector)();\n(0, _CAExport.CAsignout)();\ncy.reload();\n/***********Client book appointment*******/\n(0, _clientApponitment.clientLogin)();\n//let clientName = bookanAppointment(currentTime);\n(0, _clientApponitment.bookanAppointment)(currentTime);\n(0, _clientApponitment.viewApponitment)();\n(0, _ClientFeedback.clientsignout)();\n/************CA Accept apponitment***************/\ncy.reload();\n(0, _CAAdduser.CALogin)();\n(0, _CAappointment.acceptApponitment)();\ncy.wait(2000);\n(0, _CAExport.CAsignout)();\ncy.reload();\n/**************Client activity sector feedback */\n(0, _clientApponitment.clientLogin)();\n(0, _ClientFeedback.clientrating)();\n(0, _ClientFeedback.clientsignout)();\ncy.reload();\n//*********Export feedback*********/\n(0, _CAAdduser.CALogin)();\n(0, _CAExport.caexport)();\n(0, _CAExport.CAsignout)();",
+              "err": {},
+              "uuid": "3f161b54-cfe6-491d-a788-b02a3611cc9f",
+              "parentUUID": "06834793-5df2-49ce-bf76-1a152048f07c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3f161b54-cfe6-491d-a788-b02a3611cc9f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 337648,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
