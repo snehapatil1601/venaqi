@@ -14,6 +14,7 @@ export function checksidebar()
 {
     cy.contains('Organizations');
     cy.contains('Users');
+    console.log("New feature code");
 }
 
 export function changelan()
